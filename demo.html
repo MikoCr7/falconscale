@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FalconScale | Client Funnel Preview Sandbox</title>
+  <meta name="description" content="Interactive client sandbox demonstration of FalconScale's turnkey 3-step challenge funnel architecture: Opt-in, VIP Upgrade OTO, and Member Portal.">
+
+  <!-- Google Fonts: Inter, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#070709',
+              900: '#0c0d11',
+              850: '#111318',
+              800: '#161920',
+              border: 'rgba(255, 255, 255, 0.08)',
+              borderFocus: 'rgba(255, 255, 255, 0.22)'
+            },
+            emerald: {
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669'
+            }
+          },
+          fontFamily: {
+            sans: ['"Inter"', '"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', '"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          boxShadow: {
+            'emerald-soft': '0 2px 14px -2px rgba(16, 185, 129, 0.25)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #070709; }
+    ::-webkit-scrollbar-thumb { background: #1c202a; border-radius: 3px; }
+  </style>
+</head>
+
+<body class="bg-obsidian-950 text-slate-200 font-sans antialiased min-h-screen relative flex flex-col selection:bg-emerald-500/20 selection:text-emerald-300">
+
+  <!-- Fine Background Grid -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4.5rem_4.5rem]"></div>
+  </div>
+
+  <!-- PERSISTENT COMPACT CONTROLLER BAR (Lean & Uncrowded) -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-obsidian-950/90 border-b border-obsidian-border px-4 py-2">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 h-11 sm:h-12">
+      
+      <!-- Back to Agency & Indicator -->
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-1.5 text-xs font-mono text-slate-400 hover:text-white transition group">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform text-emerald-400"></i>
+          <span>Agency Site</span>
+        </a>
+        <div class="h-3 w-[1px] bg-white/10 hidden sm:block"></div>
+        <div class="hidden sm:flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span class="text-[11px] font-mono uppercase tracking-wider text-slate-400">
+            Funnel Sandbox
+          </span>
+        </div>
+      </div>
+
+      <!-- Step Switcher Controls (Compact) -->
+      <div class="flex items-center gap-1 p-1 rounded-lg bg-obsidian-900 border border-obsidian-border text-[11px] font-mono">
+        <button type="button" onclick="goToStep(1)" id="step-btn-1" class="step-btn px-2.5 py-1 rounded-md font-semibold transition bg-emerald-400 text-slate-950 shadow-emerald-soft">
+          1. Opt-In
+        </button>
+        <button type="button" onclick="goToStep(2)" id="step-btn-2" class="step-btn px-2.5 py-1 rounded-md font-medium text-slate-400 hover:text-white transition">
+          2. VIP ($97)
+        </button>
+        <button type="button" onclick="goToStep(3)" id="step-btn-3" class="step-btn px-2.5 py-1 rounded-md font-medium text-slate-400 hover:text-white transition">
+          3. Portal
+        </button>
+      </div>
+
+      <!-- Right Action Link -->
+      <div class="flex items-center gap-2">
+        <a href="index.html#inquiry" class="px-3 py-1 rounded-md text-[11px] font-semibold bg-emerald-400 text-slate-950 hover:bg-emerald-300 transition shadow-emerald-soft flex items-center gap-1">
+          <span>Deploy</span>
+          <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN SANDBOX VIEWPORT -->
+  <main class="relative z-10 flex-1 max-w-5xl mx-auto w-full px-4 sm:px-6 py-8 sm:py-12">
+
+    <!-- ======================================================== -->
+    <!-- SCREEN 1: FREE CHALLENGE REGISTRATION (OPT-IN) -->
+    <!-- ======================================================== -->
+    <section id="funnel-screen-1" class="space-y-12">
+      
+      <!-- Live Registration Hero -->
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/[0.08] border border-emerald-500/20 text-xs font-mono text-emerald-400 mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span>Free 5-Day Live Challenge • Starts Monday, 11:00 AM EST</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight leading-tight mb-4">
+          The <span class="text-emerald-400">7-Figure</span> Offer Architecture Intensive
+        </h1>
+        <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          How high-ticket founders, coaches, and creators scale live launches to $100k+ in 5 days without reliance on unpredictable cold webinar ads.
+        </p>
+
+        <!-- Countdown with Green Accents -->
+        <div class="mt-8 inline-flex items-center gap-4 p-4 rounded-xl bg-obsidian-900 border border-obsidian-border font-mono">
+          <div class="text-center px-2">
+            <div id="t-days" class="text-2xl font-bold text-white">03</div>
+            <div class="text-[10px] text-slate-500 uppercase">Days</div>
+          </div>
+          <span class="text-slate-600 font-bold">:</span>
+          <div class="text-center px-2">
+            <div id="t-hours" class="text-2xl font-bold text-white">14</div>
+            <div class="text-[10px] text-slate-500 uppercase">Hours</div>
+          </div>
+          <span class="text-slate-600 font-bold">:</span>
+          <div class="text-center px-2">
+            <div id="t-mins" class="text-2xl font-bold text-white">28</div>
+            <div class="text-[10px] text-slate-500 uppercase">Mins</div>
+          </div>
+          <span class="text-slate-600 font-bold">:</span>
+          <div class="text-center px-2">
+            <div id="t-secs" class="text-2xl font-bold text-emerald-400">45</div>
+            <div class="text-[10px] text-slate-500 uppercase">Secs</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Registration Form & Value Breakdown -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Agenda (7 cols) -->
+        <div class="lg:col-span-7 space-y-5">
+          <div class="p-6 sm:p-8 rounded-2xl bg-obsidian-900 border border-obsidian-border space-y-4">
+            <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>5-Day Curriculum Blueprint</span>
+            </h3>
+            
+            <div class="space-y-3 text-xs sm:text-sm">
+              <div class="p-3.5 rounded-xl bg-obsidian-950 border border-obsidian-border flex items-start gap-3">
+                <span class="font-mono text-emerald-400 font-bold text-xs mt-0.5">DAY 1</span>
+                <div>
+                  <div class="font-semibold text-white">High-Ticket Offer Deconstruction</div>
+                  <div class="text-xs text-slate-400 mt-0.5">Eliminating low-ticket pricing and framing $5k+ transformation value.</div>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-obsidian-950 border border-obsidian-border flex items-start gap-3">
+                <span class="font-mono text-emerald-400 font-bold text-xs mt-0.5">DAY 2</span>
+                <div>
+                  <div class="font-semibold text-white">The Pre-Event Priming Flywheel</div>
+                  <div class="text-xs text-slate-400 mt-0.5">How to generate 70%+ live room attendance through two-way SMS cadence.</div>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-obsidian-950 border border-obsidian-border flex items-start gap-3">
+                <span class="font-mono text-emerald-400 font-bold text-xs mt-0.5">DAY 3</span>
+                <div>
+                  <div class="font-semibold text-white">The VIP Cash Flow Engine</div>
+                  <div class="text-xs text-slate-400 mt-0.5">Self-funding 100% of your paid acquisition through dynamic VIP upsells.</div>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-obsidian-950 border border-obsidian-border flex items-start gap-3">
+                <span class="font-mono text-emerald-400 font-bold text-xs mt-0.5">DAY 4</span>
+                <div>
+                  <div class="font-semibold text-white">Live Pitch Pacing & Offer Stacking</div>
+                  <div class="text-xs text-slate-400 mt-0.5">Transitioning from teaching into high-ticket application enrollment.</div>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-obsidian-950 border border-obsidian-border flex items-start gap-3">
+                <span class="font-mono text-emerald-400 font-bold text-xs mt-0.5">DAY 5</span>
+                <div>
+                  <div class="font-semibold text-white">Midnight Cart Close & Objection Blitz</div>
+                  <div class="text-xs text-slate-400 mt-0.5">Closing 45% of total launch volume in the final 12 hours of the cart window.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-obsidian-border flex items-center justify-between text-xs text-slate-400">
+              <span>4,180+ High-Ticket Founders Registered</span>
+              <span class="font-mono text-emerald-400">100% Free General Access</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Registration Form (5 cols) -->
+        <div class="lg:col-span-5 rounded-2xl bg-obsidian-900 border border-emerald-500/30 p-6 sm:p-8 shadow-emerald-soft">
+          <div class="font-mono text-xs uppercase tracking-wider text-emerald-400 mb-2 font-semibold">Instant RSVP</div>
+          <h3 class="text-xl font-bold text-white mb-2">Claim Your Seat</h3>
+          <p class="text-xs text-slate-400 mb-6">Enter your details to receive calendar reminders and your private Day 1 broadcast link.</p>
+
+          <form onsubmit="handleRegistration(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">First Name</label>
+              <input type="text" id="r-name" required value="Marcus" class="w-full px-4 py-2.5 rounded-xl bg-obsidian-950 border border-obsidian-border text-white text-sm focus:border-emerald-400 outline-none transition">
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">Work Email</label>
+              <input type="email" id="r-email" required value="marcus@growthscale.io" class="w-full px-4 py-2.5 rounded-xl bg-obsidian-950 border border-obsidian-border text-white text-sm focus:border-emerald-400 outline-none transition">
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">Mobile Phone (Live SMS Alerts)</label>
+              <input type="tel" id="r-phone" required value="+1 (555) 392-8192" class="w-full px-4 py-2.5 rounded-xl bg-obsidian-950 border border-obsidian-border text-white text-sm focus:border-emerald-400 outline-none transition">
+            </div>
+
+            <button type="submit" id="btn-reg" class="w-full mt-2 py-3.5 rounded-xl font-bold text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition flex items-center justify-center gap-2 active:scale-95 text-sm shadow-emerald-soft">
+              <span>Reserve Free Seat & Continue</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+
+            <div class="text-[11px] text-center text-slate-500 font-mono mt-3">
+              Submitting transitions to the dynamic VIP Upgrade step.
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SCREEN 2: DYNAMIC VIP UPGRADE ONE-TIME OFFER (OTO) -->
+    <!-- ======================================================== -->
+    <section id="funnel-screen-2" class="hidden space-y-8">
+      
+      <!-- Notice -->
+      <div class="rounded-xl bg-obsidian-900 border border-emerald-500/20 p-4 text-center">
+        <span class="text-xs font-mono uppercase tracking-wider text-emerald-400">
+          Your Free General Seat Is Secured. Review Your VIP Option Below Before Event Kickoff...
+        </span>
+      </div>
+
+      <!-- Pitch -->
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl sm:text-4xl font-display font-extrabold text-white tracking-tight leading-tight">
+          Upgrade to the <span class="text-emerald-400">VIP Backstage Pass</span> with Daily Private Hotseats.
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+          Over 600 founders have chosen the VIP tier to get direct eyes on their offer ladder and private Q&A access.
+        </p>
+      </div>
+
+      <!-- VIP Card -->
+      <div class="max-w-2xl mx-auto rounded-2xl bg-obsidian-900 border border-emerald-500/30 p-6 sm:p-10 shadow-emerald-soft">
+        
+        <div class="flex items-center justify-between pb-6 border-b border-obsidian-border">
+          <div>
+            <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-semibold">One-Time Offer</span>
+            <h3 class="text-xl font-bold text-white mt-0.5">VIP All-Access Pass</h3>
+          </div>
+          <div class="text-right">
+            <span class="text-xs text-slate-500 line-through font-mono mr-1.5">$497</span>
+            <span class="text-2xl sm:text-3xl font-bold text-emerald-400 font-mono">$97</span>
+            <div class="text-[10px] font-mono text-slate-400">Save 80% Today</div>
+          </div>
+        </div>
+
+        <div class="py-6 space-y-4 text-sm">
+          <div class="flex items-start gap-3">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0"></i>
+            <div>
+              <strong class="text-white">Daily 60-Minute VIP Backstage Q&A</strong>
+              <p class="text-xs text-slate-400 mt-0.5">Join the private Zoom room before and after the session for 1-on-1 feedback.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0"></i>
+            <div>
+              <strong class="text-white">Lifetime 4K Session Recordings & Transcripts</strong>
+              <p class="text-xs text-slate-400 mt-0.5">Retain perpetual access to all sessions, templates, and frameworks.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0"></i>
+            <div>
+              <strong class="text-white">Fillable 40-Page Offer Workbook & Financial Spreadsheets</strong>
+              <p class="text-xs text-slate-400 mt-0.5">The exact plug-and-play launch models used by our 7-figure agency clients.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0"></i>
+            <div>
+              <strong class="text-white">Private VIP Telegram Community</strong>
+              <p class="text-xs text-slate-400 mt-0.5">Direct peer networking with fellow founders executing the challenge simultaneously.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 border-t border-obsidian-border space-y-4">
+          <button type="button" onclick="handleVipChoice(true)" id="btn-vip-buy" class="w-full py-3.5 rounded-xl font-bold text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition active:scale-95 text-sm flex items-center justify-center gap-2 shadow-emerald-soft">
+            <span>Upgrade My Pass to VIP ($97)</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+
+          <div class="text-center">
+            <button type="button" onclick="handleVipChoice(false)" class="text-xs font-mono text-slate-500 hover:text-slate-400 transition underline">
+              Decline VIP pass and continue with free general access
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-6 flex items-center justify-center gap-4 text-xs font-mono text-slate-500">
+          <span>🔒 256-Bit Encrypted Stripe Gateway</span>
+          <span>•</span>
+          <span>Full 30-Day Guarantee</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SCREEN 3: ATTENDEE PORTAL & CONFIRMATION -->
+    <!-- ======================================================== -->
+    <section id="funnel-screen-3" class="hidden space-y-8">
+      
+      <div class="p-6 sm:p-8 rounded-2xl bg-obsidian-900 border border-emerald-500/30 text-center shadow-emerald-soft">
+        <div class="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mx-auto mb-3">
+          <i data-lucide="check" class="w-5 h-5"></i>
+        </div>
+        <span id="portal-status-badge" class="px-3 py-1 rounded-full text-xs font-mono font-semibold uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          VIP All-Access Pass Active
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-display font-bold text-white mt-3">
+          Registration Confirmed. Welcome Inside.
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm max-w-md mx-auto mt-2">
+          Your access credentials have been provisioned. Complete the three pre-event action items below to prepare for Day 1.
+        </p>
+      </div>
+
+      <!-- Action Items -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-obsidian-900 border border-obsidian-border flex flex-col justify-between space-y-4">
+          <div>
+            <div class="font-mono text-xs text-emerald-400 mb-2 font-semibold">Step 01</div>
+            <h4 class="font-bold text-white text-base">Sync Calendar Schedule</h4>
+            <p class="text-xs text-slate-400 mt-1">Add daily 11:00 AM EST broadcast sessions and backstage Q&A to your calendar.</p>
+          </div>
+          <div class="space-y-2 pt-2">
+            <button type="button" onclick="alert('Google Calendar invite synced!')" class="w-full py-2.5 rounded-lg text-xs font-semibold bg-obsidian-850 hover:bg-obsidian-800 text-white border border-obsidian-border transition">
+              Google Calendar
+            </button>
+            <button type="button" onclick="alert('Apple Calendar .ics downloaded!')" class="w-full py-2.5 rounded-lg text-xs font-semibold bg-obsidian-850 hover:bg-obsidian-800 text-white border border-obsidian-border transition">
+              Apple Calendar (.ics)
+            </button>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-obsidian-900 border border-obsidian-border flex flex-col justify-between space-y-4">
+          <div>
+            <div class="font-mono text-xs text-emerald-400 mb-2 font-semibold">Step 02</div>
+            <h4 class="font-bold text-white text-base">Download Workbook</h4>
+            <p class="text-xs text-slate-400 mt-1">40-page interactive PDF with offer formula spreadsheets and Day 1 audit sheets.</p>
+          </div>
+          <div class="pt-2">
+            <button type="button" onclick="alert('Workbook PDF downloaded!')" class="w-full py-2.5 rounded-lg text-xs font-semibold bg-emerald-400 text-slate-950 hover:bg-emerald-300 transition flex items-center justify-center gap-2 shadow-emerald-soft">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              <span>Download Workbook PDF</span>
+            </button>
+            <div class="text-[10px] font-mono text-slate-500 text-center mt-2">Latest Release v2.4</div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-obsidian-900 border border-obsidian-border flex flex-col justify-between space-y-4">
+          <div>
+            <div class="font-mono text-xs text-emerald-400 mb-2 font-semibold">Step 03</div>
+            <h4 class="font-bold text-white text-base">Join Private Channel</h4>
+            <p class="text-xs text-slate-400 mt-1">Connect with other attendees and receive live room broadcast alerts 15 mins early.</p>
+          </div>
+          <div class="pt-2">
+            <button type="button" onclick="alert('Redirecting to Private VIP Telegram...')" class="w-full py-2.5 rounded-lg text-xs font-semibold bg-obsidian-850 hover:bg-obsidian-800 text-white border border-obsidian-border transition flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span>Join VIP Channel</span>
+            </button>
+            <div class="text-[10px] font-mono text-slate-500 text-center mt-2">Private Group Link</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Agency CTA -->
+      <div class="p-6 rounded-2xl bg-obsidian-900 border border-emerald-500/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <div class="text-white font-bold text-sm">Want FalconScale to engineer this exact turnkey architecture for your launch?</div>
+          <div class="text-xs text-slate-400 mt-0.5">End-to-end edge infrastructure, direct-response copy, and SMS automation.</div>
+        </div>
+        <a href="index.html#inquiry" class="px-5 py-2.5 rounded-lg text-xs font-semibold bg-emerald-400 text-slate-950 hover:bg-emerald-300 transition whitespace-nowrap shadow-emerald-soft">
+          Schedule Launch Audit
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto border-t border-obsidian-border bg-obsidian-950 py-6 text-xs text-slate-500 font-mono">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>FalconScale Client Sandbox • Static Edge Engine</div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="text-emerald-400 hover:underline">Back to Agency Site</a>
+        <span>•</span>
+        <button type="button" onclick="goToStep(1)" class="hover:text-white transition">Restart Sandbox</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function goToStep(step) {
+      for (let i = 1; i <= 3; i++) {
+        const btn = document.getElementById(`step-btn-${i}`);
+        if (i === step) {
+          btn.className = "step-btn px-2.5 py-1 rounded-md font-semibold transition bg-emerald-400 text-slate-950 shadow-emerald-soft";
+        } else {
+          btn.className = "step-btn px-2.5 py-1 rounded-md font-medium text-slate-400 hover:text-white transition";
+        }
+      }
+
+      document.getElementById('funnel-screen-1').classList.toggle('hidden', step !== 1);
+      document.getElementById('funnel-screen-2').classList.toggle('hidden', step !== 2);
+      document.getElementById('funnel-screen-3').classList.toggle('hidden', step !== 3);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function handleRegistration(e) {
+      e.preventDefault();
+      const btn = document.getElementById('btn-reg');
+      btn.disabled = true;
+      btn.innerHTML = `<span class="animate-spin mr-2">⚙</span> Reserving Seat...`;
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = `<span>Reserve Free Seat & Continue</span><i data-lucide="arrow-right" class="w-4 h-4"></i>`;
+        lucide.createIcons();
+        goToStep(2);
+      }, 500);
+    }
+
+    function handleVipChoice(isVip) {
+      const btn = document.getElementById('btn-vip-buy');
+      btn.disabled = true;
+      btn.innerHTML = `<span class="animate-spin mr-2">⚙</span> Processing Order...`;
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = `<span>Upgrade My Pass to VIP ($97)</span><i data-lucide="arrow-right" class="w-4 h-4"></i>`;
+        
+        const badge = document.getElementById('portal-status-badge');
+        if (isVip) {
+          badge.textContent = "VIP All-Access Pass Active ($97)";
+          badge.className = "px-3 py-1 rounded-full text-xs font-mono font-semibold uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/20";
+        } else {
+          badge.textContent = "General Free Pass Active";
+          badge.className = "px-3 py-1 rounded-full text-xs font-mono font-semibold uppercase bg-obsidian-850 text-slate-400 border border-obsidian-border";
+        }
+
+        lucide.createIcons();
+        goToStep(3);
+      }, 500);
+    }
+
+    // Countdown
+    let secs = 3 * 86400 + 14 * 3600 + 28 * 60 + 45;
+    setInterval(() => {
+      if (secs > 0) {
+        secs--;
+        document.getElementById('t-days').textContent = String(Math.floor(secs / 86400)).padStart(2, '0');
+        document.getElementById('t-hours').textContent = String(Math.floor((secs % 86400) / 3600)).padStart(2, '0');
+        document.getElementById('t-mins').textContent = String(Math.floor((secs % 3600) / 60)).padStart(2, '0');
+        document.getElementById('t-secs').textContent = String(secs % 60).padStart(2, '0');
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FalconScale | Enterprise Launch Infrastructure & Challenge Funnels</title>
+  <meta name="description" content="FalconScale engineers turnkey launch infrastructure, edge-hosted challenge funnels, and dynamic VIP checkout systems for elite high-ticket creators and educators.">
+  <meta name="keywords" content="launch infrastructure, challenge funnels, high ticket funnels, VIP upsell, creator agency, launch systems">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FalconScale | Enterprise Launch Infrastructure">
+  <meta property="og:description" content="Turnkey 30-day launch sprints, edge-hosted challenge funnels, and automated VIP upsell systems for high-ticket creators.">
+  <meta property="og:url" content="https://falconscale.com">
+
+  <!-- Typography: Inter, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#070709',
+              900: '#0c0d11',
+              850: '#111318',
+              800: '#161920',
+              750: '#1c202a',
+              border: 'rgba(255, 255, 255, 0.08)',
+              borderSubtle: 'rgba(255, 255, 255, 0.05)',
+              borderFocus: 'rgba(255, 255, 255, 0.22)'
+            },
+            emerald: {
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669'
+            }
+          },
+          fontFamily: {
+            sans: ['"Inter"', '"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', '"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          boxShadow: {
+            'elevation-1': '0 1px 2px 0 rgba(0, 0, 0, 0.4)',
+            'elevation-2': '0 4px 16px -2px rgba(0, 0, 0, 0.5), 0 2px 6px -1px rgba(0, 0, 0, 0.3)',
+            'elevation-3': '0 12px 36px -4px rgba(0, 0, 0, 0.6), 0 4px 12px -2px rgba(0, 0, 0, 0.4)',
+            'emerald-soft': '0 2px 14px -2px rgba(16, 185, 129, 0.25)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Executive Subtle Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070709;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1c202a;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #282e3d;
+    }
+
+    /* Tactile Minimal Range Input with Emerald Accent */
+    input[type=range] {
+      -webkit-appearance: none;
+      background: #1c202a;
+      border-radius: 9999px;
+      height: 4px;
+      outline: none;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #10b981;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+      transition: transform 0.15s ease, background 0.15s ease;
+      border: 2px solid #070709;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+      background: #34d399;
+    }
+  </style>
+</head>
+
+<body class="bg-obsidian-950 text-slate-200 font-sans antialiased selection:bg-emerald-500/20 selection:text-emerald-300 min-h-screen relative overflow-x-hidden">
+
+  <!-- Subtle Atmosphere -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4.5rem_4.5rem]"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[350px] bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(16,185,129,0.04),transparent_80%)]"></div>
+  </div>
+
+  <!-- COMPACT, NON-CROWDED NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-obsidian-950/90 border-b border-obsidian-border transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <div class="w-7 h-7 rounded-lg bg-obsidian-900 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:border-emerald-400/60 transition">
+          <svg class="w-3.5 h-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="font-display font-bold text-sm sm:text-base tracking-tight text-white">
+            Falcon<span class="text-emerald-400">Scale</span>
+          </span>
+          <span class="hidden sm:inline-block text-[9px] font-mono tracking-wider uppercase text-slate-500 border-l border-white/10 pl-1.5">
+            Systems
+          </span>
+        </div>
+      </a>
+
+      <!-- Compact Desktop Navigation Links (Clean & Uncrowded) -->
+      <nav class="hidden md:flex items-center gap-5 lg:gap-7 text-xs font-medium text-slate-400">
+        <a href="#economics" class="hover:text-white transition-colors">Economics</a>
+        <a href="#systems" class="hover:text-white transition-colors">Systems</a>
+        <a href="#matrix" class="hover:text-white transition-colors">Comparison</a>
+        <a href="#protocol" class="hover:text-white transition-colors">Protocol</a>
+        <a href="demo.html" class="text-slate-300 hover:text-white transition-colors flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span>Live Demo</span>
+          <i data-lucide="arrow-up-right" class="w-3 h-3 text-slate-400"></i>
+        </a>
+      </nav>
+
+      <!-- Right Compact CTAs -->
+      <div class="flex items-center gap-3">
+        <div class="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-obsidian-900 border border-obsidian-border text-[11px] font-mono text-slate-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-emerald-400 font-medium">Q4 Sprint Open</span>
+        </div>
+        <a href="#inquiry" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition duration-150 shadow-emerald-soft active:scale-95 flex items-center gap-1.5">
+          <span>Book Audit</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 text-slate-400 hover:text-white" aria-label="Toggle Navigation">
+          <i data-lucide="menu" id="menuIcon" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pt-2 pb-5 border-b border-obsidian-border bg-obsidian-950/98 backdrop-blur-xl">
+      <div class="flex flex-col gap-2.5 text-xs font-medium text-slate-300">
+        <a href="#economics" class="mobile-link py-1.5 hover:text-white">Economics Engine</a>
+        <a href="#systems" class="mobile-link py-1.5 hover:text-white">Systems Architecture</a>
+        <a href="#matrix" class="mobile-link py-1.5 hover:text-white">Enterprise vs Legacy</a>
+        <a href="#protocol" class="mobile-link py-1.5 hover:text-white">30-Day Protocol</a>
+        <a href="demo.html" class="mobile-link py-1.5 text-emerald-400 flex items-center justify-between font-semibold">
+          <span>Client Funnel Demo</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="relative z-10">
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="pt-12 sm:pt-20 pb-14 sm:pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+        
+        <!-- Status Pill with Emerald Green Accent -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/[0.08] border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-6 hover:border-emerald-500/40 transition">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-[11px] uppercase tracking-wider font-semibold">Turnkey Launch Infrastructure</span>
+          <span class="text-white/20">/</span>
+          <span class="text-slate-300 text-[11px]">Q4 Private Sprints Available</span>
+        </div>
+
+        <!-- Headline with Green Word Accent -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-[1.12] mb-5">
+          The Engineering Engine Behind <br class="hidden sm:inline">
+          <span class="text-emerald-400">6 and 7-Figure</span> Live Launches.
+        </h1>
+
+        <!-- Subhead -->
+        <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
+          We build, automate, and execute turnkey challenge funnels, dynamic VIP upsell checkouts, and multi-channel copy pipelines for high-ticket online creators and coaches.
+        </p>
+
+        <!-- Executive CTAs -->
+        <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto mb-14">
+          <a href="#inquiry" class="w-full sm:w-auto px-6 py-3 rounded-xl font-semibold text-xs sm:text-sm text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition active:scale-95 text-center flex items-center justify-center gap-2 shadow-emerald-soft">
+            <span>Schedule Launch Architecture Audit</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="demo.html" class="w-full sm:w-auto px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm text-slate-300 bg-obsidian-900 hover:bg-obsidian-850 border border-obsidian-border transition active:scale-95 text-center flex items-center justify-center gap-2">
+            <i data-lucide="play" class="w-3.5 h-3.5 text-emerald-400"></i>
+            <span>Inspect Live Funnel Demo</span>
+          </a>
+        </div>
+
+        <!-- Metric Scoreboard (Clean, Minimal, Institutional with Emerald Numbers) -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full max-w-4xl text-left">
+          <div class="p-5 rounded-xl bg-obsidian-900/60 border border-obsidian-border">
+            <div class="text-2xl sm:text-3xl font-bold font-mono text-emerald-400 tracking-tight">$28.4M+</div>
+            <div class="text-xs text-slate-400 mt-1">Live Launch Gross Supported</div>
+          </div>
+          <div class="p-5 rounded-xl bg-obsidian-900/60 border border-obsidian-border">
+            <div class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">&lt; 260ms</div>
+            <div class="text-xs text-slate-400 mt-1">Global Edge Page Speeds</div>
+          </div>
+          <div class="p-5 rounded-xl bg-obsidian-900/60 border border-obsidian-border">
+            <div class="text-2xl sm:text-3xl font-bold font-mono text-emerald-400 tracking-tight">14.8%</div>
+            <div class="text-xs text-slate-400 mt-1">Average VIP Upgrade Take-Rate</div>
+          </div>
+          <div class="p-5 rounded-xl bg-obsidian-900/60 border border-obsidian-border">
+            <div class="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">30 Days</div>
+            <div class="text-xs text-slate-400 mt-1">Turnkey Ingestion Sprint</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. INTERACTIVE LAUNCH ECONOMICS & FINANCIAL ENGINE -->
+    <section id="economics" class="py-16 sm:py-24 border-y border-obsidian-border bg-obsidian-900/40 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-12">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 mb-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span>Financial Modeling Engine</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight">
+            Simulate Your Next Launch Sprint Unit Economics
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Calculate upfront VIP cash flow that fully offsets your paid acquisition, paired with net backend conversions.
+          </p>
+        </div>
+
+        <!-- Calculator Container -->
+        <div class="rounded-2xl bg-obsidian-900 border border-obsidian-border p-6 sm:p-10 shadow-elevation-2">
+          
+          <!-- Launch Archetype Selector -->
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-obsidian-border">
+            <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Select Launch Scale:</span>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" onclick="loadLaunchPreset(1500, 10, 97, 3000, 4.0)" class="preset-tab px-3.5 py-1.5 rounded-lg text-xs font-medium bg-obsidian-800 text-slate-300 border border-obsidian-border hover:border-emerald-500/40 transition">
+                Coach Intensive (1,500 Leads)
+              </button>
+              <button type="button" onclick="loadLaunchPreset(4500, 14, 147, 4500, 5.5)" class="preset-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-emerald-400 text-slate-950 shadow-emerald-soft transition">
+                Flagship Launch (4,500 Leads)
+              </button>
+              <button type="button" onclick="loadLaunchPreset(12000, 18, 197, 5000, 7.0)" class="preset-tab px-3.5 py-1.5 rounded-lg text-xs font-medium bg-obsidian-800 text-slate-300 border border-obsidian-border hover:border-emerald-500/40 transition">
+                Mastermind Scale (12,000 Leads)
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            
+            <!-- Left: Sliders (7 Cols) -->
+            <div class="lg:col-span-7 space-y-6">
+              
+              <!-- Slider 1: Lead Volume -->
+              <div>
+                <div class="flex justify-between items-center mb-2 text-sm">
+                  <label class="text-slate-300 font-medium">Free Challenge Registrants</label>
+                  <span id="label-registrants" class="font-mono font-bold text-white">4,500</span>
+                </div>
+                <input type="range" id="range-registrants" min="500" max="20000" step="250" value="4500" class="w-full">
+                <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
+                  <span>500</span>
+                  <span>10,000</span>
+                  <span>20,000</span>
+                </div>
+              </div>
+
+              <!-- Slider 2: VIP Upgrade Rate -->
+              <div>
+                <div class="flex justify-between items-center mb-2 text-sm">
+                  <label class="text-slate-300 font-medium">VIP Ticket Upgrade Rate</label>
+                  <span id="label-vipRate" class="font-mono font-bold text-emerald-400">14.0%</span>
+                </div>
+                <input type="range" id="range-vipRate" min="3" max="25" step="0.5" value="14.0" class="w-full">
+                <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
+                  <span>3% (Baseline)</span>
+                  <span>14% (FalconScale Avg)</span>
+                  <span>25% (Optimized)</span>
+                </div>
+              </div>
+
+              <!-- Slider 3: VIP Ticket Price -->
+              <div>
+                <div class="flex justify-between items-center mb-2 text-sm">
+                  <label class="text-slate-300 font-medium">VIP Ticket Price ($)</label>
+                  <span id="label-vipPrice" class="font-mono font-bold text-white">$147</span>
+                </div>
+                <input type="range" id="range-vipPrice" min="47" max="297" step="10" value="147" class="w-full">
+                <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
+                  <span>$47</span>
+                  <span>$147</span>
+                  <span>$297</span>
+                </div>
+              </div>
+
+              <!-- Dual Sliders: Backend Price & Conversion -->
+              <div class="pt-4 border-t border-obsidian-border grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <div class="flex justify-between items-center mb-2 text-xs sm:text-sm">
+                    <label class="text-slate-300 font-medium">Backend Offer ($)</label>
+                    <span id="label-backendPrice" class="font-mono font-bold text-white">$4,500</span>
+                  </div>
+                  <input type="range" id="range-backendPrice" min="1500" max="10000" step="250" value="4500" class="w-full">
+                </div>
+                <div>
+                  <div class="flex justify-between items-center mb-2 text-xs sm:text-sm">
+                    <label class="text-slate-300 font-medium">Core Conversion</label>
+                    <span id="label-backendConv" class="font-mono font-bold text-emerald-400">5.5%</span>
+                  </div>
+                  <input type="range" id="range-backendConv" min="1" max="12" step="0.25" value="5.5" class="w-full">
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right: Financial Breakdown (5 Cols) -->
+            <div class="lg:col-span-5 rounded-xl bg-obsidian-950 border border-obsidian-border p-6 sm:p-7 flex flex-col justify-between">
+              
+              <div>
+                <div class="flex items-center justify-between text-xs font-mono uppercase tracking-wider text-slate-400 mb-4 pb-2 border-b border-obsidian-border">
+                  <span>Gross Financial Output</span>
+                  <span class="text-emerald-400 font-medium flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    Validated Model
+                  </span>
+                </div>
+
+                <!-- Total Gross -->
+                <div class="mb-6">
+                  <div class="text-xs text-slate-400 uppercase font-mono">Total Launch Gross</div>
+                  <div id="stat-totalGross" class="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight mt-1 font-mono">
+                    $1,205,370
+                  </div>
+                  <div class="text-xs text-slate-400 mt-1 font-mono">
+                    Ad Spend Self-Funded: <span class="text-emerald-400 font-medium">100% via Upfront VIPs</span>
+                  </div>
+                </div>
+
+                <!-- Cash Flows with Green Indicator -->
+                <div class="space-y-3 pt-4 border-t border-obsidian-border text-sm">
+                  <div class="flex justify-between items-center">
+                    <span class="text-slate-400 flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                      VIP Upfront Cash Collected
+                    </span>
+                    <span id="stat-vipRevenue" class="font-mono font-bold text-emerald-400">$92,610</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-slate-400">High-Ticket Backend Sales</span>
+                    <span id="stat-backendRevenue" class="font-mono font-bold text-white">$1,113,750</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-slate-400">VIP Ticket Attendees</span>
+                    <span id="stat-vipCount" class="font-mono text-slate-300">630 VIPs</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-slate-400">Core High-Ticket Clients</span>
+                    <span id="stat-backendCount" class="font-mono text-slate-300">247 Enrollees</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action button -->
+              <div class="mt-8 pt-5 border-t border-obsidian-border">
+                <button type="button" onclick="lockInFinancialModel()" class="w-full py-3 rounded-lg text-xs sm:text-sm font-semibold bg-emerald-400 hover:bg-emerald-300 text-slate-950 transition flex items-center justify-center gap-2 shadow-emerald-soft">
+                  <span>Transfer Parameters to Audit Request</span>
+                  <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SYSTEMS ARCHITECTURE -->
+    <section id="systems" class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-14">
+        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 mb-3">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span>Core Infrastructure Stack</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">
+          Four Turnkey Engines Engineered for Conversion.
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3 leading-relaxed">
+          We replace disjointed freelancers with an integrated engineering, copywriting, and media pipeline ready to ingest your audience.
+        </p>
+      </div>
+
+      <!-- Systems Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Pillar 01 -->
+        <div class="p-8 rounded-2xl bg-obsidian-900 border border-obsidian-border flex flex-col justify-between hover:border-emerald-500/30 transition">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-emerald-400 uppercase font-semibold">Engine 01</span>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                Latency: &lt; 260ms
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Sub-Second Edge Funnel Architecture</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Slow landing pages leak up to 40% of cold ad traffic before the headline even loads. We build serverless edge-rendered funnels on Vercel's global CDN that load instantaneously across 300+ edge locations worldwide.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-obsidian-border text-xs text-slate-400 space-y-2">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0"></i>
+              <span>Multi-region edge rendering with 99.99% uptime guarantees</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0"></i>
+              <span>Zero third-party script bloat or heavy WordPress plugin lag</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 02 -->
+        <div class="p-8 rounded-2xl bg-obsidian-900 border border-obsidian-border flex flex-col justify-between hover:border-emerald-500/30 transition">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-emerald-400 uppercase font-semibold">Engine 02</span>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                Stripe Elements
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Frictionless 1-Click VIP Upsell Checkouts</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Immediately upon registration, attendees encounter a compelling VIP upgrade offer before checking their inbox. Integrated Apple Pay, Google Pay, and Stripe webhooks drive an industry-leading 14%–22% take-rate.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-obsidian-border text-xs text-slate-400 space-y-2">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0"></i>
+              <span>Instant upfront cash capture that self-finances 100% of ad spend</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0"></i>
+              <span>Automatic card decline retry logic and abandoned cart SMS recovery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 03 -->
+        <div class="p-8 rounded-2xl bg-obsidian-900 border border-obsidian-border flex flex-col justify-between hover:border-emerald-500/30 transition">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-emerald-400 uppercase font-semibold">Engine 03</span>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                Two-Way Cadence
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Automated Direct-Response Copy & SMS</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Email alone is insufficient for high-ticket room attendance. We script and deploy 24+ launch assets: pre-event warm-up broadcasts, two-way SMS showup alerts, daily replay recaps, and a 7-part midnight cart-closing blitz.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-obsidian-border text-xs text-slate-400 space-y-2">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0"></i>
+              <span>Consistent 68%–78% live session room attendance through SMS alerts</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0"></i>
+              <span>Psychological objection-handling copy engineered for your voice</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 04 -->
+        <div class="p-8 rounded-2xl bg-obsidian-900 border border-obsidian-border flex flex-col justify-between hover:border-emerald-500/30 transition">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-emerald-400 uppercase font-semibold">Engine 04</span>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                Executive Media
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Keynote Presentation Decks & Workbooks</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              High-ticket buyers evaluate authority in seconds. We produce custom 4K keynote slide decks designed for visual retention, promotional video ad packages, and a 40-page interactive attendee workbook with built-in pitch anchors.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-obsidian-border text-xs text-slate-400 space-y-2">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0"></i>
+              <span>Engineered pitch-transition slide pacing for Day 4 high-ticket offer</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0"></i>
+              <span>Branded digital assets ready for community, WhatsApp, and Discord</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 4. ENTERPRISE VS LEGACY COMPARISON MATRIX -->
+    <section id="matrix" class="py-16 sm:py-24 border-y border-obsidian-border bg-obsidian-900/30">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight">
+            Enterprise Infrastructure vs. Ad-Hoc Setup
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Why leading high-ticket creators partner with FalconScale instead of managing multiple unaligned contractors.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-obsidian-border bg-obsidian-900">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-obsidian-border bg-obsidian-950/60">
+                <th class="py-4 px-6 font-mono text-xs uppercase text-slate-400">Launch Capability</th>
+                <th class="py-4 px-6 font-bold text-emerald-400 bg-emerald-500/[0.04]">FalconScale Turnkey</th>
+                <th class="py-4 px-6 font-medium text-slate-400">Multiple Freelancers</th>
+                <th class="py-4 px-6 font-medium text-slate-400">In-House Generalist</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-obsidian-border text-slate-300 font-normal">
+              <tr>
+                <td class="py-4 px-6 font-medium text-white">Turnaround to Live Launch</td>
+                <td class="py-4 px-6 font-semibold text-emerald-300 bg-emerald-500/[0.04]">30-Day Guaranteed Sprint</td>
+                <td class="py-4 px-6 text-slate-400">60 - 90 Days (Delayed)</td>
+                <td class="py-4 px-6 text-slate-400">45 - 60 Days</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-medium text-white">Global Edge Page Speed</td>
+                <td class="py-4 px-6 font-semibold text-emerald-300 bg-emerald-500/[0.04]">&lt; 260ms Worldwide</td>
+                <td class="py-4 px-6 text-slate-400">2.5s - 4.5s (WordPress / ClickFunnels)</td>
+                <td class="py-4 px-6 text-slate-400">1.8s - 3.2s</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-medium text-white">VIP Upfront Monetization</td>
+                <td class="py-4 px-6 font-semibold text-emerald-300 bg-emerald-500/[0.04]">Dynamic 1-Click Apple/Google Pay</td>
+                <td class="py-4 px-6 text-slate-400">Generic external checkout link</td>
+                <td class="py-4 px-6 text-slate-400">Standard form bump</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-medium text-white">Launch Copy & Sequences</td>
+                <td class="py-4 px-6 font-semibold text-emerald-300 bg-emerald-500/[0.04]">Included (24+ Full Assets)</td>
+                <td class="py-4 px-6 text-slate-400">Requires separate copywriter ($6k+)</td>
+                <td class="py-4 px-6 text-slate-400">Untested generalist copy</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-medium text-white">Live Event Monitoring SLA</td>
+                <td class="py-4 px-6 font-semibold text-emerald-300 bg-emerald-500/[0.04]">Real-time on-call engineers</td>
+                <td class="py-4 px-6 text-slate-400">No guarantee on live days</td>
+                <td class="py-4 px-6 text-slate-400">Single person failure point</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. 30-DAY LAUNCH SPRINT PROTOCOL -->
+    <section id="protocol" class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 mb-3">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span>Disciplined Execution</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
+          The 30-Day Turnkey Launch Protocol
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          A four-phase chronological delivery system engineered to remove every operational obstacle from your plate.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <!-- Week 1 -->
+        <div class="p-6 rounded-2xl bg-obsidian-900 border border-obsidian-border flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-xs text-emerald-400 uppercase mb-4 font-semibold">Phase 01 • Week 1</div>
+            <h3 class="text-lg font-bold text-white mb-2">Offer Ladder & Strategy</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Deep-dive extraction of your intellectual property, price elasticity analysis, and formulation of the 5-day challenge curriculum with an irresistible $97–$197 VIP offer.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-obsidian-border text-[11px] font-mono text-slate-400 space-y-1">
+            <div class="text-slate-300">✓ Audience Persona Dossier</div>
+            <div class="text-slate-300">✓ VIP Experience Structure</div>
+          </div>
+        </div>
+
+        <!-- Week 2 -->
+        <div class="p-6 rounded-2xl bg-obsidian-900 border border-emerald-500/30 flex flex-col justify-between shadow-emerald-soft">
+          <div>
+            <div class="font-mono text-xs text-emerald-400 uppercase mb-4 font-semibold">Phase 02 • Week 2</div>
+            <h3 class="text-lg font-bold text-white mb-2">Edge Infrastructure Build</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Our engineering team architects the edge registration funnels, Stripe checkout webhooks, email broadcast infrastructure, and SMS routing gateways.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-obsidian-border text-[11px] font-mono text-slate-400 space-y-1">
+            <div class="text-slate-300">✓ Sub-Second Funnel Stack</div>
+            <div class="text-slate-300">✓ Stripe Webhook Integration</div>
+          </div>
+        </div>
+
+        <!-- Week 3 -->
+        <div class="p-6 rounded-2xl bg-obsidian-900 border border-obsidian-border flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-xs text-emerald-400 uppercase mb-4 font-semibold">Phase 03 • Week 3</div>
+            <h3 class="text-lg font-bold text-white mb-2">Copy & Media Production</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Direct-response launch copywriters craft your 24+ broadcast emails and SMS triggers. The media studio delivers your 4K presentation deck and workbook PDF.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-obsidian-border text-[11px] font-mono text-slate-400 space-y-1">
+            <div class="text-slate-300">✓ Complete 24-Part Sequence</div>
+            <div class="text-slate-300">✓ Interactive Attendee Workbook</div>
+          </div>
+        </div>
+
+        <!-- Week 4 -->
+        <div class="p-6 rounded-2xl bg-obsidian-900 border border-obsidian-border flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-xs text-emerald-400 uppercase mb-4 font-semibold">Phase 04 • Week 4</div>
+            <h3 class="text-lg font-bold text-white mb-2">Live Sprint & Cart Blitz</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Real-time room monitoring, automated showup SMS blasts, daily replay distribution, and execution of our final 12-hour midnight cart-closing sequence.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-obsidian-border text-[11px] font-mono text-slate-400 space-y-1">
+            <div class="text-slate-300">✓ Live Attendance Monitoring</div>
+            <div class="text-slate-300">✓ Final Midnight Cart Blitz</div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 6. LIVE CLIENT DEMO EMBED -->
+    <section class="py-16 sm:py-24 border-y border-obsidian-border bg-obsidian-900/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-5 space-y-5">
+            <div class="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>Client Preview Sandbox</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+              Test Drive The Complete VIP Funnel Journey.
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+              We built an interactive client preview sandbox demonstrating the entire attendee lifecycle: from initial sub-second registration, to the 1-click VIP upgrade checkout, to the attendee workbook access portal.
+            </p>
+            <div class="pt-2">
+              <a href="demo.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition shadow-emerald-soft">
+                <span>Launch Standalone Client Sandbox</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Window Teaser -->
+          <div class="lg:col-span-7 rounded-2xl bg-obsidian-950 border border-obsidian-border shadow-elevation-3 p-5 sm:p-7">
+            <div class="flex items-center justify-between pb-4 border-b border-obsidian-border mb-6">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/70"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/70"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/70"></span>
+                <span class="ml-2 font-mono text-xs text-slate-400">demo.falconscale.com/challenge-funnel</span>
+              </div>
+              <span class="text-[11px] font-mono text-emerald-400">Interactive Preview</span>
+            </div>
+
+            <!-- 3 Tabs -->
+            <div class="grid grid-cols-3 gap-2 mb-6">
+              <button type="button" onclick="setTeaserStep(1)" id="t-btn-1" class="t-btn py-2 px-3 rounded-lg text-xs font-mono text-center bg-emerald-400 text-slate-950 font-semibold transition">
+                1. Free Opt-In
+              </button>
+              <button type="button" onclick="setTeaserStep(2)" id="t-btn-2" class="t-btn py-2 px-3 rounded-lg text-xs font-mono text-center bg-obsidian-850 text-slate-400 border border-obsidian-border hover:text-white transition">
+                2. VIP Upgrade ($97)
+              </button>
+              <button type="button" onclick="setTeaserStep(3)" id="t-btn-3" class="t-btn py-2 px-3 rounded-lg text-xs font-mono text-center bg-obsidian-850 text-slate-400 border border-obsidian-border hover:text-white transition">
+                3. Member Portal
+              </button>
+            </div>
+
+            <!-- Teaser Box Content -->
+            <div id="teaser-display" class="min-h-[220px] rounded-xl bg-obsidian-900 border border-obsidian-border p-6 flex flex-col justify-center text-center">
+              <div class="space-y-3">
+                <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  Step 1: High-Converting Opt-In
+                </span>
+                <h4 class="text-lg font-bold text-white">"The 7-Figure Offer Architecture Intensive"</h4>
+                <p class="text-xs text-slate-400 max-w-md mx-auto">
+                  Edge-rendered landing page delivering 48%+ opt-in rate from cold traffic with zero script lag.
+                </p>
+                <div class="pt-2 text-xs font-mono text-slate-400 flex justify-center gap-4">
+                  <span>⚡ Load Time: 210ms</span>
+                  <span class="text-emerald-400">✓ SMS Verification Active</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-obsidian-border flex items-center justify-between text-xs text-slate-400">
+              <span>Ready to inspect the full client workflow?</span>
+              <a href="demo.html" class="text-emerald-400 hover:underline flex items-center gap-1 font-medium">
+                <span>View Standalone Demo</span>
+                <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. LEAD CAPTURE & AUDIT INQUIRY FORM -->
+    <section id="inquiry" class="py-20 sm:py-28 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 mb-3">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span>Confidential Application</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">
+          Request A FalconScale Launch Audit
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+          We limit intake to two private client sprints per quarter. Submit your details below to schedule an infrastructure review with our team.
+        </p>
+      </div>
+
+      <div class="rounded-2xl bg-obsidian-900 border border-obsidian-border p-6 sm:p-10 shadow-elevation-2 relative">
+        
+        <form id="inquiryForm" onsubmit="submitInquiry(event)" class="space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="leadName" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                Full Name <span class="text-emerald-400">*</span>
+              </label>
+              <input type="text" id="leadName" required placeholder="Alex Hormozi" class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-obsidian-border text-white text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 outline-none transition placeholder:text-slate-600">
+            </div>
+
+            <div>
+              <label for="leadEmail" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                Work / Business Email <span class="text-emerald-400">*</span>
+              </label>
+              <input type="email" id="leadEmail" required placeholder="alex@acquisitions.com" class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-obsidian-border text-white text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 outline-none transition placeholder:text-slate-600">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="leadChannel" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                Creator Channel / Offer URL <span class="text-emerald-400">*</span>
+              </label>
+              <input type="text" id="leadChannel" required placeholder="youtube.com/@channel or skool.com/..." class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-obsidian-border text-white text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 outline-none transition placeholder:text-slate-600">
+            </div>
+
+            <div>
+              <label for="leadAudience" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                Audience / Email List Size
+              </label>
+              <select id="leadAudience" class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-obsidian-border text-white text-sm focus:border-emerald-500 outline-none transition">
+                <option value="5k-20k">5,000 - 20,000 subscribers</option>
+                <option value="20k-50k" selected>20,000 - 50,000 subscribers</option>
+                <option value="50k-100k">50,000 - 100,000 subscribers</option>
+                <option value="100k+">100,000+ subscribers</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="leadTarget" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                Projected Launch Window
+              </label>
+              <select id="leadTarget" class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-obsidian-border text-white text-sm focus:border-emerald-500 outline-none transition">
+                <option value="30days">Immediate (Next 30 Days)</option>
+                <option value="q4" selected>Q4 Sprint Window</option>
+                <option value="q1">Q1 Next Year Sprint</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="leadBottleneck" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                Primary Operational Objective
+              </label>
+              <select id="leadBottleneck" class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-obsidian-border text-white text-sm focus:border-emerald-500 outline-none transition">
+                <option value="turnkey" selected>Turnkey End-to-End Execution</option>
+                <option value="funnel">Edge Funnel & Checkout Upgrades</option>
+                <option value="copy">Launch Copy & Automated SMS Cadence</option>
+                <option value="vip">Maximizing VIP Upfront Monetization</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="leadNotes" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+              Launch Objectives & Context
+            </label>
+            <textarea id="leadNotes" rows="3" placeholder="Tell us about your high-ticket offer price ($3k-$10k), historical event conversion, or target launch gross..." class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-obsidian-border text-white text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 outline-none transition placeholder:text-slate-600"></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" id="btnSubmit" class="w-full py-4 rounded-xl font-bold text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition active:scale-95 text-sm flex items-center justify-center gap-2 shadow-emerald-soft">
+              <i data-lucide="shield" class="w-4 h-4"></i>
+              <span>Submit Confidential Launch Application</span>
+            </button>
+            <div class="flex items-center justify-center gap-3 text-[11px] font-mono text-slate-500 mt-3">
+              <span>🔒 Strict Non-Disclosure Protected</span>
+              <span>•</span>
+              <span class="text-emerald-400">Response &lt; 12 Hours</span>
+            </div>
+          </div>
+
+        </form>
+
+        <!-- Toast / Success Modal -->
+        <div id="formSuccess" class="hidden absolute inset-0 bg-obsidian-950/95 backdrop-blur-md rounded-2xl flex flex-col items-center justify-center p-8 text-center border border-emerald-500/30 z-20">
+          <div class="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+            <i data-lucide="check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Launch Application Received</h3>
+          <p class="text-slate-400 text-xs sm:text-sm max-w-md mb-6 leading-relaxed">
+            Our principal infrastructure architects are evaluating your channel metrics. You will receive a confidential assessment within 12 hours.
+          </p>
+          <div class="flex items-center gap-3">
+            <button type="button" onclick="resetInquiryForm()" class="px-4 py-2 rounded-lg text-xs font-semibold bg-obsidian-800 text-slate-300 border border-obsidian-border hover:text-white transition">
+              Submit Another Inquiry
+            </button>
+            <a href="demo.html" class="px-4 py-2 rounded-lg text-xs font-semibold bg-emerald-400 text-slate-950 hover:bg-emerald-300 transition">
+              Open Client Demo
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- 8. INSTITUTIONAL FOOTER -->
+  <footer class="border-t border-obsidian-border bg-obsidian-950 py-12 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-2.5">
+            <div class="w-6 h-6 rounded bg-obsidian-850 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <svg class="w-3.5 h-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+              </svg>
+            </div>
+            <span class="text-white font-bold text-base">Falcon<span class="text-emerald-400">Scale</span></span>
+          </div>
+          <p class="text-slate-400 text-xs max-w-sm leading-relaxed">
+            FalconScale is an elite digital launch and growth infrastructure agency. We architect turnkey challenge funnels, dynamic VIP checkout portals, and multi-channel broadcast pipelines for high-ticket creators and educators.
+          </p>
+          <div class="pt-1 font-mono text-[11px] text-slate-400">
+            Direct Inquiries: <a href="mailto:falconscale.inquiries@gmail.com" class="text-emerald-400 hover:underline">falconscale.inquiries@gmail.com</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="font-mono text-xs uppercase tracking-wider text-white font-semibold mb-3">Systems & Protocol</div>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#economics" class="hover:text-emerald-400 transition">Financial Scenario Modeler</a></li>
+            <li><a href="#systems" class="hover:text-emerald-400 transition">Edge Funnel Systems</a></li>
+            <li><a href="#matrix" class="hover:text-emerald-400 transition">Infrastructure Matrix</a></li>
+            <li><a href="demo.html" class="hover:text-emerald-400 transition">Standalone Client Demo</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="font-mono text-xs uppercase tracking-wider text-white font-semibold mb-3">SLA & Infrastructure</div>
+          <div class="space-y-2 text-[11px] font-mono text-slate-400">
+            <div class="flex items-center gap-2 text-emerald-400">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>Global Edge Network: Operational</span>
+            </div>
+            <div>Stripe Verified Gateway: Nominal</div>
+            <div>Response SLA: &lt; 12 Hours</div>
+            <div>Strict Client NDA Standard</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-obsidian-border flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-slate-500">
+        <div>&copy; 2026 FalconScale Agency. All rights reserved. Built for high-ticket online creators.</div>
+        <div class="flex items-center gap-4">
+          <a href="#hero" class="hover:text-white transition">Top ↑</a>
+          <span>•</span>
+          <a href="demo.html" class="text-emerald-400 hover:underline">Client Sandbox</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    lucide.createIcons();
+
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // FINANCIAL MODEL CALCULATOR
+    const rReg = document.getElementById('range-registrants');
+    const rVipRate = document.getElementById('range-vipRate');
+    const rVipPrice = document.getElementById('range-vipPrice');
+    const rBackPrice = document.getElementById('range-backendPrice');
+    const rBackConv = document.getElementById('range-backendConv');
+
+    const lReg = document.getElementById('label-registrants');
+    const lVipRate = document.getElementById('label-vipRate');
+    const lVipPrice = document.getElementById('label-vipPrice');
+    const lBackPrice = document.getElementById('label-backendPrice');
+    const lBackConv = document.getElementById('label-backendConv');
+
+    const statTotal = document.getElementById('stat-totalGross');
+    const statVipRev = document.getElementById('stat-vipRevenue');
+    const statBackRev = document.getElementById('stat-backendRevenue');
+    const statVipCount = document.getElementById('stat-vipCount');
+    const statBackCount = document.getElementById('stat-backendCount');
+
+    function fmtUSD(val) {
+      return '$' + Math.round(val).toLocaleString('en-US');
+    }
+
+    function computeModel() {
+      const reg = parseInt(rReg.value, 10);
+      const vRate = parseFloat(rVipRate.value) / 100;
+      const vPrice = parseInt(rVipPrice.value, 10);
+      const bPrice = parseInt(rBackPrice.value, 10);
+      const bConv = parseFloat(rBackConv.value) / 100;
+
+      const vCount = Math.round(reg * vRate);
+      const vRevenue = vCount * vPrice;
+
+      const bCount = Math.round(reg * bConv);
+      const bRevenue = bCount * bPrice;
+
+      const total = vRevenue + bRevenue;
+
+      lReg.textContent = reg.toLocaleString('en-US');
+      lVipRate.textContent = (vRate * 100).toFixed(1) + '%';
+      lVipPrice.textContent = '$' + vPrice;
+      lBackPrice.textContent = '$' + bPrice.toLocaleString('en-US');
+      lBackConv.textContent = (bConv * 100).toFixed(1) + '%';
+
+      statTotal.textContent = fmtUSD(total);
+      statVipRev.textContent = fmtUSD(vRevenue);
+      statBackRev.textContent = fmtUSD(bRevenue);
+      statVipCount.textContent = vCount.toLocaleString('en-US') + ' VIPs';
+      statBackCount.textContent = bCount.toLocaleString('en-US') + ' Enrollees';
+    }
+
+    [rReg, rVipRate, rVipPrice, rBackPrice, rBackConv].forEach(el => {
+      el.addEventListener('input', computeModel);
+    });
+
+    function loadLaunchPreset(reg, vRate, vPrice, bPrice, bConv) {
+      rReg.value = reg;
+      rVipRate.value = vRate;
+      rVipPrice.value = vPrice;
+      rBackPrice.value = bPrice;
+      rBackConv.value = bConv;
+      computeModel();
+    }
+
+    function lockInFinancialModel() {
+      const reg = rReg.value;
+      const gross = statTotal.textContent;
+      const notes = document.getElementById('leadNotes');
+      notes.value = `[Financial Model]: Target ${parseInt(reg).toLocaleString()} leads. Projected launch volume: ${gross}. Requesting turnkey architecture deployment.`;
+      document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // TEASER STEP SWITCHER
+    function setTeaserStep(step) {
+      for (let i = 1; i <= 3; i++) {
+        const btn = document.getElementById(`t-btn-${i}`);
+        if (i === step) {
+          btn.className = "t-btn py-2 px-3 rounded-lg text-xs font-mono text-center bg-emerald-400 text-slate-950 font-semibold transition";
+        } else {
+          btn.className = "t-btn py-2 px-3 rounded-lg text-xs font-mono text-center bg-obsidian-850 text-slate-400 border border-obsidian-border hover:text-white transition";
+        }
+      }
+
+      const display = document.getElementById('teaser-display');
+      if (step === 1) {
+        display.innerHTML = `
+          <div class="space-y-3">
+            <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              Step 1: High-Converting Opt-In
+            </span>
+            <h4 class="text-lg font-bold text-white">"The 7-Figure Offer Architecture Intensive"</h4>
+            <p class="text-xs text-slate-400 max-w-md mx-auto">
+              Edge-rendered landing page delivering 48%+ opt-in rate from cold traffic with zero script lag.
+            </p>
+            <div class="pt-2 text-xs font-mono text-slate-400 flex justify-center gap-4">
+              <span>⚡ Load Time: 210ms</span>
+              <span class="text-emerald-400">✓ SMS Verification Active</span>
+            </div>
+          </div>
+        `;
+      } else if (step === 2) {
+        display.innerHTML = `
+          <div class="space-y-3">
+            <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              Step 2: 1-Click VIP Upgrade ($97)
+            </span>
+            <h4 class="text-lg font-bold text-white">VIP Backstage Pass & Workbook ($97)</h4>
+            <p class="text-xs text-slate-400 max-w-md mx-auto">
+              Captures $97–$197 upfront cash immediately upon opt-in, financing 100% of the creator's paid advertising budget.
+            </p>
+            <div class="pt-2 text-xs font-mono text-slate-400 flex justify-center gap-4">
+              <span class="text-emerald-400">★ 14.8% Avg Take-Rate</span>
+              <span>✓ 1-Click Apple/Google Pay</span>
+            </div>
+          </div>
+        `;
+      } else {
+        display.innerHTML = `
+          <div class="space-y-3">
+            <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              Step 3: Attendee Portal & Onboarding
+            </span>
+            <h4 class="text-lg font-bold text-white">Interactive Workbook & Calendar Ingestion</h4>
+            <p class="text-xs text-slate-400 max-w-md mx-auto">
+              Direct Google Calendar sync and fillable 40-page session PDF download, driving 70%+ live attendance.
+            </p>
+            <div class="pt-2 text-xs font-mono text-slate-400 flex justify-center gap-4">
+              <span class="text-emerald-400">✓ 82% Calendar Sync</span>
+              <span>✓ 2-Way SMS Alert Cadence</span>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // FORM SUBMIT
+    function submitInquiry(e) {
+      e.preventDefault();
+      const btn = document.getElementById('btnSubmit');
+      btn.disabled = true;
+      btn.innerHTML = `<span class="animate-spin mr-2">⚙</span> Securing Application...`;
+
+      setTimeout(() => {
+        document.getElementById('formSuccess').classList.remove('hidden');
+        lucide.createIcons();
+      }, 600);
+    }
+
+    function resetInquiryForm() {
+      document.getElementById('inquiryForm').reset();
+      document.getElementById('formSuccess').classList.add('hidden');
+      const btn = document.getElementById('btnSubmit');
+      btn.disabled = false;
+      btn.innerHTML = `<i data-lucide="shield" class="w-4 h-4"></i><span>Submit Confidential Launch Application</span>`;
+      lucide.createIcons();
+    }
+
+    // Init calculations
+    computeModel();
+  </script>
+</body>
+</html>
